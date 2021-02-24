@@ -14,6 +14,7 @@ function App(props) {
       <Greeting />
       <Present />
       <Ideas />
+      
       <PresentsList presents={props.state.presents} />
     </div>
   );
