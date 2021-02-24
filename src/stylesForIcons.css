@@ -1,0 +1,138 @@
+.blue-start {
+  fill: var(--blueStar);
+}
+
+.pink-start {
+  fill: var(--subcolor);
+}
+
+.start-small {
+  width: 9px;
+  height: 9px;
+}
+
+.start-medium {
+  width: 14px;
+  height: 15px;
+}
+
+.cake {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.icecream {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
+
+.garland {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.gift {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+
+.cloud {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.star1 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.star2 {
+  position: absolute;
+  right: 130px;
+  top: 30px;
+}
+
+.star3 {
+  position: absolute;
+  top: 40%;
+  right: 120px;
+}
+
+.star4 {
+  position: absolute;
+  bottom: 23%;
+  left: 100px;
+}
+
+.star5 {
+  position: absolute;
+  bottom: 25%;
+  right: 120px;
+}
+
+.star6 {
+    position: absolute;
+    right: 120px;
+    top: 20px;
+}
+
+.star7 {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+}
+
+.star8 {
+    position: absolute;
+    left: 40px;
+    top: 40%;
+}
+
+.star9 {
+    position: absolute;
+    right: 40px;
+    top: 35%;
+}
+
+.star10 {
+    position: absolute;
+    left: 30px;
+    bottom: 25%;
+}
+
+.star11 {
+    position: absolute;
+    left: 80px;
+    bottom: 5%;
+}
+
+.star12 {
+    position: absolute;
+    right: 80px;
+    top: 20px;
+}
+
+.star13 {
+    position: absolute;
+    right: 30px;
+    top: 30%;
+}
+
+.star14 {
+    position: absolute;
+    left: 30px;
+    bottom: 30%;
+}
+
+.star15 {
+    position: absolute;
+    right: 60px;
+    bottom: 7%;
+}
+
