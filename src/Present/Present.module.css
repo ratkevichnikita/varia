@@ -4,6 +4,7 @@
 
 .container p {
     margin-bottom: 15px;
+    line-height: var(--lineHeight);
 }
 
 .end {
