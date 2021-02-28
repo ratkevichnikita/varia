@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import state from './Redux/state';
+import store from './Redux/state';
+
+import firebase from 'firebase';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBCHeqgj4C6UIp3lFLf4xC65xDi3a3OMGw",
+  authDomain: "varia-e0a0d.firebaseapp.com",
+  databaseURL: "https://varia-e0a0d-default-rtdb.firebaseio.com",
+  projectId: "varia-e0a0d",
+  storageBucket: "varia-e0a0d.appspot.com",
+  messagingSenderId: "508121360188",
+  appId: "1:508121360188:web:9c1b54b0016f5ec5e92039"
+}
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} />
+    <App state={store.getState()} />
   </React.StrictMode>,
   document.getElementById('root')
 );
