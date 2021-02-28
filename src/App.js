@@ -15,13 +15,14 @@ let componentDidMount = () => {
 
 function App(props) {
   componentDidMount()
+
   return (
     <div className="app">
       <Header />
       <Greeting />
       <Present />
       <Ideas />
-      <PresentsList presents={props.state.presents} />
+      <PresentsList presents={props.state.presents} changePresentsValue={props.changePresentsValue} />
 
     </div>
   );

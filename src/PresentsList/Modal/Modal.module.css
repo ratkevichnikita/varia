@@ -19,6 +19,11 @@
   transition: 0.5s;
 }
 
+.boxModal.active .boxModalContent{
+  transform: scale(1);
+  transition: 0.5s;
+}
+
 .boxModalContent {
   position: relative;
   padding: 20px;
@@ -26,10 +31,6 @@
   max-width: 500px;
   background-color: #fff;
   transform: scale(0.5);
-  transition: 0.5s;
-}
-.boxModalContent.active {
-  transform: scale(1);
   transition: 0.5s;
 }
 
@@ -63,7 +64,7 @@
   background-color: var(--mainColor);
   display: inline-block;
   margin-right: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   transition: 0.5s;
 }
 
@@ -82,6 +83,6 @@
   cursor: pointer;
   background-color: var(--whiteColor);
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 5px;
 }

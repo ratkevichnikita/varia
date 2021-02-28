@@ -22,7 +22,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={store.getState()} />
+    <App state={store.getState()} changePresentsValue={store.changePresentsValue.bind(store)} />
   </React.StrictMode>,
   document.getElementById('root')
 );

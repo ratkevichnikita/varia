@@ -10,8 +10,26 @@
   justify-content: center;
 }
 
-.item.selected {
+.item.selected:before {
+  content: 'ВЫБРАНА';
+  position: absolute;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg );
+}
+
+.item.selected .link {
+  pointer-events: none;
+}
+
+.item.selected .btn {
   opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .price {
