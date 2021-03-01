@@ -3,14 +3,14 @@ import classes from './PresentsItem.module.css';
 import Prod1 from '../../images/prod1.webp';
 import Modal from "../Modal/Modal";
 
-let PresentsItem = (props) => {
+const PresentsItem = (props) => {
 
   const [modalActive, setModalActive] = useState(false);
 
-  const [selected, setSelected] = useState(false);
+
 
     return (
-      <li  className={selected ? `${classes.item} ${classes.selected}` : `${classes.item} `}>
+      <li  className={props.selected ? `${classes.item} ${classes.selected}` : `${classes.item} `}>
         <h3>{props.title}</h3>
         <p className={classes.price}>{props.price}₽</p>
         <img src={Prod1} alt="photo" />
@@ -19,7 +19,7 @@ let PresentsItem = (props) => {
         <Modal
           active={modalActive}
           id={props.id}
-          setSelected={setSelected}
+
           setActive={setModalActive}
           changePresentsValue={props.changePresentsValue}
         >

@@ -6,23 +6,35 @@ let store = {
         id: 1,
         link: 'https://www.detmir.ru/product/index/id/3227061/',
         image: 'Картинка',
-        selected: 'false',
+        selected: false,
       },
       { title:'Игрушка мягкая Pomsies Кали',
         price:'999',
         id:2,
         link: 'https://www.detmir.ru/product/index/id/3263191/',
         image: 'Картинка',
-        selected: 'false',
+        selected: false,
       },
     ]
   },
   getState() {
     return this._state;
   },
-  changePresentsValue(selectProduct) {
-    console.log(this._state.presents.map(item => item.id) )
-    this._state.presents.selected = selectProduct;
+  changePresentsValue(id) {
+    this._state.presents = this._state.presents.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          selected: true
+        }
+      }
+      return {
+        ...item,
+        selected: false
+      }
+    });
+    console.log(this._state.presents)
+    // this._state.presents.selected = selectProduct;
   }
 }
 

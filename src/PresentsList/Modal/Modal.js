@@ -1,12 +1,10 @@
 import classes from './Modal.module.css';
 
 
-let Modal = ({active, id, changePresentsValue, children, setSelected, setActive}) => {
+const Modal = ({active, id, changePresentsValue, children, setActive}) => {
 
   const addClassOnElem = () => {
-    let change = 'true';
-    setSelected(true)
-    changePresentsValue(change)
+    changePresentsValue(id)
     setActive(false)
   }
 
