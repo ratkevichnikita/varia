@@ -10,7 +10,9 @@ import firebase from 'firebase';
 
 let componentDidMount = () => {
   const db = firebase.database();
-  console.log(db)
+  const title = db.ref('title');
+  const title1 = title.on('value', elem => elem.val() )
+  console.log(title1)
 }
 
 function App(props) {

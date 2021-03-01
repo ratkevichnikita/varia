@@ -10,7 +10,7 @@ let PresentsList = (props) => {
                                                              price={item.price}
                                                              link={item.link}
                                                              image={item.image}/>)
-  debugger
+
   return (
     <div className="wrapper-long">
       <ul className={classes.list}>
@@ -20,5 +20,4 @@ let PresentsList = (props) => {
     </div>
   )
 }
-
 export default PresentsList;

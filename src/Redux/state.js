@@ -1,4 +1,7 @@
 let store = {
+  _subscriber() {
+    console.log('no subscribes')
+  },
   _state: {
     presents: [
       { title:'Игрушка мягкая котик ',
@@ -7,6 +10,7 @@ let store = {
         link: 'https://www.detmir.ru/product/index/id/3227061/',
         image: 'Картинка',
         selected: false,
+
       },
       { title:'Игрушка мягкая Pomsies Кали',
         price:'999',
@@ -14,27 +18,32 @@ let store = {
         link: 'https://www.detmir.ru/product/index/id/3263191/',
         image: 'Картинка',
         selected: false,
+
       },
     ]
   },
   getState() {
     return this._state;
   },
+  subscribe(observer) {
+    this._subscriber = observer
+  },
   changePresentsValue(id) {
     this._state.presents = this._state.presents.map(item => {
       if (item.id === id) {
         return {
           ...item,
-          selected: true
+          selected: true,
+
         }
       }
       return {
         ...item,
-        selected: false
+
       }
     });
     console.log(this._state.presents)
-    // this._state.presents.selected = selectProduct;
+    this._subscriber(this._state)
   }
 }
 
