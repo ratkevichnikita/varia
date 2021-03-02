@@ -7,8 +7,6 @@ const PresentsItem = (props) => {
 
   const [modalActive, setModalActive] = useState(false);
 
-
-
     return (
       <li  className={props.selected ? `${classes.item} ${classes.selected}` : `${classes.item} `}>
         <h3>{props.title}</h3>
