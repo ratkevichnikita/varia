@@ -8,16 +8,22 @@ import PresentsList from "./PresentsList/PresentsList";
 
 import firebase from 'firebase';
 
-let componentDidMount = () => {
+
+const showBd = () => {
   const db = firebase.database();
-  const title = db.ref('title');
-  const title1 = title.on('value', elem => elem.val() )
-  console.log(title1)
+  const name = db.ref('dataBase');
+  name.on('value', (elem) => {
+    let list = [];
+    elem.forEach((el) => {
+      list.push(el.val());
+    });
+    console.log(list)
+  })
 }
 
-function App(props) {
-  componentDidMount()
 
+function App(props) {
+  showBd()
   return (
     <div className="app">
       <Header />
