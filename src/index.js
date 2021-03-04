@@ -20,12 +20,19 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App state={store.getState()} changePresentsValue={store.changePresentsValue.bind(store)} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let renderEntireTree = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App state={store.getState()} changePresentsValue={store.changePresentsValue.bind(store)} />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
+renderEntireTree(store.getState())
+
+store.subscribe(renderEntireTree);
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

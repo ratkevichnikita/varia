@@ -17,7 +17,6 @@ const PresentsItem = (props) => {
         <Modal
           active={modalActive}
           id={props.id}
-
           setActive={setModalActive}
           changePresentsValue={props.changePresentsValue}
         >
