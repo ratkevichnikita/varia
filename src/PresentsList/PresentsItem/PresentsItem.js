@@ -19,6 +19,7 @@ const PresentsItem = (props) => {
           id={props.id}
           setActive={setModalActive}
           changePresentsValue={props.changePresentsValue}
+          handleSelected={props.handleSelected}
         >
           <h3>
             Вы подтверждаете свой выбор?
