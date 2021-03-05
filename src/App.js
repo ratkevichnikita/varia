@@ -8,54 +8,55 @@ import PresentsList from "./PresentsList/PresentsList";
 
 import firebase from 'firebase';
 
-
-
 export default class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            presents:[],
-        }
-        this.showBd = this.showBd.bind(this)
-        this.handleSelected = this.handleSelected.bind(this)
+  constructor(props) {
+    super(props);
+    this.state = {
+      presents: [],
     }
-    showBd = () => {
-        const db = firebase.database();
-        const name = db.ref('dataBase');
-        name.on('value', (elem) => {
-            let list = [];
-            elem.forEach((el) => {
-                list.push(el.val());
-            });
-               this.setState({
-                   presents:list
-               })
+    this.showBd = this.showBd.bind(this)
+    this.handleSelected = this.handleSelected.bind(this)
+  }
 
-        })
-    }
+  showBd = () => {
+    const db = firebase.database();
+    const name = db.ref('dataBase');
+    name.on('value', (elem) => {
+      let list = [];
+      elem.forEach((el) => {
+        list.push(el.val());
+      });
+      this.setState({
+        presents: list
+      })
 
-    handleSelected = (id) => {
-        let selectedItem = this.state.presents[id-1];
-        selectedItem.selected = true;
+    })
+  }
 
-        const db = firebase.database();
-        const name = db.ref('dataBase/prod' + id).set(selectedItem);
-    }
+  handleSelected = (id) => {
+    let selectedItem = this.state.presents[id - 1];
+    selectedItem.selected = true;
 
-    componentDidMount() {
-        this.showBd()
-    }
-    render() {
-        return (
-            <div className="app">
-                <Header />
-                <Greeting />
-                <Present />
-                <Ideas />
-                <PresentsList presents={this.state.presents} selected={this.handleSelected} changePresentsValue={this.props.changePresentsValue} />
-            </div>
-        )
-    }
+    const db = firebase.database();
+    const name = db.ref('dataBase/prod' + id).set(selectedItem);
+  }
+
+  componentDidMount() {
+    this.showBd()
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <Header/>
+        <Greeting/>
+        <Present/>
+        <Ideas/>
+        <PresentsList presents={this.state.presents} selected={this.handleSelected}
+                      changePresentsValue={this.props.changePresentsValue}/>
+      </div>
+    )
+  }
 }
 
 
