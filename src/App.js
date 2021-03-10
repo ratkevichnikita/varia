@@ -22,8 +22,10 @@ export default class App extends React.Component {
     const db = firebase.database();
     const name = db.ref('dataBase');
     name.on('value', (elem) => {
+
       let list = [];
       elem.forEach((el) => {
+        // console.log(el.val())
         list.push(el.val());
       });
       this.setState({
@@ -34,11 +36,13 @@ export default class App extends React.Component {
   }
 
   handleSelected = (id) => {
-    let selectedItem = this.state.presents[id - 1];
+
+    let selectedItem = { ...this.state.presents.find(present => present.id === id) };
     selectedItem.selected = true;
 
     const db = firebase.database();
     const name = db.ref('dataBase/prod' + id).set(selectedItem);
+    this.showBd();
   }
 
   componentDidMount() {
