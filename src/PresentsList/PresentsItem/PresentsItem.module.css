@@ -1,0 +1,63 @@
+.item {
+  width: 49%;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+  background-color: var(--bgColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.item.selected:before {
+  content: 'ВЫБРАНА';
+  position: absolute;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg );
+}
+
+.item.selected .link {
+  pointer-events: none;
+}
+
+.item.selected .btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.price {
+  margin: 10px 0 15px;
+  font-size: 12px;
+  line-height: var(--lineHeight);
+}
+
+.link {
+  font-size: 12px;
+  padding-top: 10px;
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+.btn {
+  color: var(--whiteColor);
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: var(--lineHeight);
+  cursor: pointer;
+  background-color: var(--subcolor);
+  border: none;
+  margin-top: 15px;
+}
+
+
+

@@ -1,0 +1,13 @@
+.present {
+    background-color: var(--bgColor);
+}
+
+.container p {
+    margin-bottom: 15px;
+    line-height: var(--lineHeight);
+}
+
+.end {
+    padding-top: 5px;
+    font-size: 12px;
+}

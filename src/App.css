@@ -1,0 +1,174 @@
+:root {
+  --mainColor: #BF6563;
+  --subcolor: #D47B7A;
+  --textColor: #4E5F81;
+  --blueStar: #8BC9E0;
+  --pinkStar: #EAC0C7;
+  --bgColor: #F5F6FC;
+  --whiteColor: #fff;
+
+  --lineHeight: 1.3em;
+}
+
+
+@font-face {
+  font-family: 'Lifehack';
+  src: url('./fonts/LifehackSans-Regular.eot');
+  src: url('./fonts/LifehackSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/LifehackSans-Regular.woff2') format('woff2'),
+  url('./fonts/LifehackSans-Regular.woff') format('woff'),
+  url('./fonts/LifehackSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src: url('./fonts/MuseoCyrl-700.eot');
+  src: url('./fonts/MuseoCyrl-700.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/MuseoCyrl-700.woff2') format('woff2'),
+  url('./fonts/MuseoCyrl-700.woff') format('woff'),
+  url('./fonts/MuseoCyrl-700.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lifehack';
+  src: url('./fonts/LifehackSans-Medium.eot');
+  src: url('./fonts/LifehackSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/LifehackSans-Medium.woff2') format('woff2'),
+  url('./fonts/LifehackSans-Medium.woff') format('woff'),
+  url('./fonts/LifehackSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('./fonts/Circe-Regular.eot');
+  src: url('./fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/Circe-Regular.woff2') format('woff2'),
+  url('./fonts/Circe-Regular.woff') format('woff'),
+  url('./fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Circe', sans-serif;
+  font-size: 1rem;
+  color: var(--textColor);
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+input, textarea {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Lifehack", serif;
+  font-weight: 500;
+  color: var(--subcolor);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: calc(3rem + 5vw);
+  line-height: var(--lineHeight);
+  color: var(--mainColor);
+}
+
+h2 {
+  font-size: calc(1rem + 3vw);
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+div, nav, p, span, button, input, a, form, ul, li, textarea, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover, a:active, a:focus, button, input, button:hover, button:active, button:focus, input:focus, input:active, textarea, textarea:focus, textarea:active {
+  text-decoration: none;
+  outline: none;
+}
+
+input {
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper-long {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 40px 0;
+  position: relative;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@media screen and (min-width: 700px) {
+
+  h2 {
+    font-size: 40px;
+  }
+
+}
